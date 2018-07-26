@@ -84,7 +84,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h5 id="hibernate中的一级缓存和二级缓存"><a href="#hibernate中的一级缓存和二级缓存" class="headerlink" title="hibernate中的一级缓存和二级缓存"></a>hibernate中的一级缓存和二级缓存</h5><h6 id="一级缓存："><a href="#一级缓存：" class="headerlink" title="一级缓存："></a>一级缓存：</h6><pre><code>   一级缓存指的是session级别的缓存，作用是减少在session范围内访问数据库的次数;
+session关闭，一级缓存失效。
+   所有的持久化对象都归session管理，都存在于一级缓存中；
+   session的缓存由hibernate维护，用户要想操作缓存内容，可以通过hibernate的clear/
+ivit进行管理。
+</code></pre><h6 id="二级缓存"><a href="#二级缓存" class="headerlink" title="二级缓存"></a>二级缓存</h6><pre><code>   二级缓存是应用程序级别的缓存，所有session可以共用。
+   hibernate提供二级缓存的默认实现，并且是一种可插配的缓存框架，在hibernate的配置
+文件配置即可。
+  二级缓存储存的是常用的类。
+</code></pre>
       
     </div>
     <footer class="article-footer">
