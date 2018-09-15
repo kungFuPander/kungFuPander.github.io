@@ -229,6 +229,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/15/docker/" itemprop="url">docker</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-15T11:19:09+08:00">
+                2018-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="docker常用操作："><a href="#docker常用操作：" class="headerlink" title="docker常用操作："></a>docker常用操作：</h2><ul>
+<li><p>镜像操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">检索：docker search</span><br><span class="line">拉取：docker pull 镜像名</span><br><span class="line">列表：docker images</span><br><span class="line">删除：docker rmi images-id</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>容器操作(以tomcat为例)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">启动：docker run --name name -d tomcat   //错误操作</span><br><span class="line">      dock run --name mytomcat -p 8080:8080  -d tomcat  //正确操作</span><br><span class="line">查看所有：docker ps -a</span><br><span class="line">启动/关闭：docker start/stop container‐id</span><br><span class="line">删除：docker rm container‐id</span><br><span class="line">查看容器日志：docker logs container‐name/container‐id</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="远程mysql-1251："><a href="#远程mysql-1251：" class="headerlink" title="远程mysql 1251："></a>远程mysql 1251：</h2><p><em>容器中登录mysql,进入mysql&gt;命令行</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 docker <span class="built_in">exec</span> -it mysql01 bash      //mysql01是mysql容器的别名</span><br><span class="line">2 mysql -u root -p</span><br><span class="line">3 输入密码</span><br></pre></td></tr></table></figure></p>
+<p><em>进行授权远程连接(注意mysql 8.0跟之前的授权方式不同)</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 mysql&gt; GRANT ALL PRIVILEGES ON *.* TO <span class="string">'root'</span>@<span class="string">'%'</span>WITH GRANT OPTION;</span><br><span class="line">2 mysql&gt;FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
+<p><em>更改加密规则</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'password'</span> PASSWORD EXPIRE NEVER;</span><br></pre></td></tr></table></figure></p>
+<p><em>更新root用户密码</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 ALTER USER <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED WITH mysql_native_password BY <span class="string">'password'</span>;</span><br></pre></td></tr></table></figure></p>
+<p><em>刷新权限</em><br>flush privileges;<br>退出bash：ctrl+D</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/27/随笔/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -762,7 +894,7 @@ ivit进行管理。
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

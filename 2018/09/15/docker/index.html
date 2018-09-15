@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="pojo：pojo(plain old java object),纯洁老旧的java对象，我们称之为”简单java对象”。指的是那些没有任何类继承，没有实现任何接口，更没有被其他框架侵入的java对象。 pojo于javaBean的区别   pojo用于数据的临时传递，只能装载数据，是数据的装载体，没有处理业务逻辑的能力。     javaBean是用java语言写的可重用组件，虽然获取数据方式与">
+<meta name="description" content="docker常用操作： 镜像操作： 1234检索：docker search拉取：docker pull 镜像名列表：docker images删除：docker rmi images-id  容器操作(以tomcat为例) 123456启动：docker run --name name -d tomcat   //错误操作      dock run --name mytomcat -p 808">
 <meta property="og:type" content="article">
-<meta property="og:title" content="随笔">
-<meta property="og:url" content="http://yoursite.com/2018/07/27/随笔/index.html">
+<meta property="og:title" content="docker">
+<meta property="og:url" content="http://yoursite.com/2018/09/15/docker/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="pojo：pojo(plain old java object),纯洁老旧的java对象，我们称之为”简单java对象”。指的是那些没有任何类继承，没有实现任何接口，更没有被其他框架侵入的java对象。 pojo于javaBean的区别   pojo用于数据的临时传递，只能装载数据，是数据的装载体，没有处理业务逻辑的能力。     javaBean是用java语言写的可重用组件，虽然获取数据方式与">
+<meta property="og:description" content="docker常用操作： 镜像操作： 1234检索：docker search拉取：docker pull 镜像名列表：docker images删除：docker rmi images-id  容器操作(以tomcat为例) 123456启动：docker run --name name -d tomcat   //错误操作      dock run --name mytomcat -p 808">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-27T02:48:18.851Z">
+<meta property="og:updated_time" content="2018-09-15T03:50:40.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随笔">
-<meta name="twitter:description" content="pojo：pojo(plain old java object),纯洁老旧的java对象，我们称之为”简单java对象”。指的是那些没有任何类继承，没有实现任何接口，更没有被其他框架侵入的java对象。 pojo于javaBean的区别   pojo用于数据的临时传递，只能装载数据，是数据的装载体，没有处理业务逻辑的能力。     javaBean是用java语言写的可重用组件，虽然获取数据方式与">
+<meta name="twitter:title" content="docker">
+<meta name="twitter:description" content="docker常用操作： 镜像操作： 1234检索：docker search拉取：docker pull 镜像名列表：docker images删除：docker rmi images-id  容器操作(以tomcat为例) 123456启动：docker run --name name -d tomcat   //错误操作      dock run --name mytomcat -p 808">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/27/随笔/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/15/docker/"/>
 
 
 
 
 
-  <title>随笔 | Hexo</title>
+  <title>docker | Hexo</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/27/随笔/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">随笔</h1>
+          <h1 class="post-title" itemprop="name headline">docker</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-27T10:39:24+08:00">
-                2018-07-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-15T11:19:09+08:00">
+                2018-09-15
               </time>
             
 
@@ -299,9 +299,19 @@
       
 
       
-        <p>pojo：pojo(plain old java object),纯洁老旧的java对象，我们称之为”简单java对象”。<br>指的是那些没有任何类继承，没有实现任何接口，更没有被其他框架侵入的java对象。</p>
-<h4 id="pojo于javaBean的区别"><a href="#pojo于javaBean的区别" class="headerlink" title="pojo于javaBean的区别"></a>pojo于javaBean的区别</h4><p>   pojo用于数据的临时传递，只能装载数据，是数据的装载体，没有处理业务逻辑的能力。  </p>
-<p>  javaBean是用java语言写的可重用组件，虽然获取数据方式与pojo一致，但javaBean里面有处理业务逻辑的方法</p>
+        <h2 id="docker常用操作："><a href="#docker常用操作：" class="headerlink" title="docker常用操作："></a>docker常用操作：</h2><ul>
+<li><p>镜像操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">检索：docker search</span><br><span class="line">拉取：docker pull 镜像名</span><br><span class="line">列表：docker images</span><br><span class="line">删除：docker rmi images-id</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>容器操作(以tomcat为例)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">启动：docker run --name name -d tomcat   //错误操作</span><br><span class="line">      dock run --name mytomcat -p 8080:8080  -d tomcat  //正确操作</span><br><span class="line">查看所有：docker ps -a</span><br><span class="line">启动/关闭：docker start/stop container‐id</span><br><span class="line">删除：docker rm container‐id</span><br><span class="line">查看容器日志：docker logs container‐name/container‐id</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="远程mysql-1251："><a href="#远程mysql-1251：" class="headerlink" title="远程mysql 1251："></a>远程mysql 1251：</h2><p><em>容器中登录mysql,进入mysql&gt;命令行</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 docker <span class="built_in">exec</span> -it mysql01 bash      //mysql01是mysql容器的别名</span><br><span class="line">2 mysql -u root -p</span><br><span class="line">3 输入密码</span><br></pre></td></tr></table></figure></p>
+<p><em>进行授权远程连接(注意mysql 8.0跟之前的授权方式不同)</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 mysql&gt; GRANT ALL PRIVILEGES ON *.* TO <span class="string">'root'</span>@<span class="string">'%'</span>WITH GRANT OPTION;</span><br><span class="line">2 mysql&gt;FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></p>
+<p><em>更改加密规则</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'password'</span> PASSWORD EXPIRE NEVER;</span><br></pre></td></tr></table></figure></p>
+<p><em>更新root用户密码</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 ALTER USER <span class="string">'root'</span>@<span class="string">'%'</span> IDENTIFIED WITH mysql_native_password BY <span class="string">'password'</span>;</span><br></pre></td></tr></table></figure></p>
+<p><em>刷新权限</em><br>flush privileges;<br>退出bash：ctrl+D</p>
 
       
     </div>
@@ -326,8 +336,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/26/Hibernate-二三记/" rel="next" title="Hibernate 二三记">
-                <i class="fa fa-chevron-left"></i> Hibernate 二三记
+              <a href="/2018/07/27/随笔/" rel="next" title="随笔">
+                <i class="fa fa-chevron-left"></i> 随笔
               </a>
             
           </div>
@@ -335,10 +345,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/15/docker/" rel="prev" title="docker">
-                docker <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -452,7 +458,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#pojo于javaBean的区别"><span class="nav-number">1.</span> <span class="nav-text">pojo于javaBean的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#docker常用操作："><span class="nav-number">1.</span> <span class="nav-text">docker常用操作：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程mysql-1251："><span class="nav-number">2.</span> <span class="nav-text">远程mysql 1251：</span></a></li></ol></div>
             
 
           </div>
